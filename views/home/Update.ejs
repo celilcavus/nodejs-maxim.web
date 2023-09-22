@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/bootstrap/dist/css/bootstrap.css">
+    <title>Home</title>
+</head>
+
+<body>
+    <div class="container mt-4">
+        <form action="/home//HomeUpdate" method="post">
+            <input type="hidden" name="id" value="<%= model.id%>">
+
+            <label for="">Title</label>
+            <input type="text" class="form-control" name="title" value="<%= model.title%>">
+            <br>
+            <label>SubTitle</label>
+            <input type="text" class="form-control" name="subtitle" value="<%= model.subtitle%>">
+            <br>
+            <button class="btn btn-dark" type="submit">Save</button>
+            <a href="/home//GetHomeList" class="btn btn-outline-success">Go to list</a>
+        </form>
+    </div>
+</body>
+
+</html>
