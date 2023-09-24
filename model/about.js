@@ -8,7 +8,7 @@ class About {
     }
 
     Add(){
-        context.execute("INSERT INTO about (title,subtitle) VALUES (?,?)",[this.title,this.subtitle]);
+        return context.execute("INSERT INTO about (title,subtitle) VALUES (?,?)",[this.title,this.subtitle]);
     }
     GetAll(){
         return context.execute("SELECT * FROM about")
@@ -19,10 +19,10 @@ class About {
     }
 
     Update(id){
-        context.execute("UPDATE about SET title = ? , subtitle = ? WHERE id = ?",[this.title,this.subtitle,id]);
+        return context.execute("UPDATE about SET title = ? , subtitle = ? WHERE id = ?",[this.title,this.subtitle,id]);
     }
     Delete(id){
-        context.execute("DELETE FROM about WHERE id = ? ",[id])
+        return context.execute("DELETE FROM about WHERE id = ? ",[id])
     }
 }
 

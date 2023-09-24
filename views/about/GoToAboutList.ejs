@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/bootstrap/dist/css/bootstrap.css">
+    <title>List</title>
+</head>
+<body>
+  <div class="container">
+    <div class="table-responsive">
+        <table class="table table-striped
+        table-hover	
+        table-borderless
+        table-primary
+        align-middle">
+            <thead class="table-light">
+               
+                <tr>
+                    <th>ID</th>
+                    <th>Title</th>
+                    <th>SubTitle</th>
+                    <th>Update</th>
+                    <th>Delete</th>
+                </tr>
+                </thead>
+                <tbody class="">
+                    <% model.forEach(element => { %>
+                     <tr>
+                        <td><%= element.id  %></td>
+                        <td><%= element.title  %></td>
+                        <td><%= element.subtitle  %></td>
+                        <td><a href="about/Update/<%= element.id %>" class="btn btn-warning">Update</a></td>
+                        <td><a href="about/Delete/<%= element.id %>" class="btn btn-danger">Delete</a></td>
+                     </tr>
+                    <% }) %>
+                </tbody>
+        </table>
+        <a href="/about" class="btn btn-primary">Back To Index</a>
+    </div>
+  </div>
+    
+</body>
+</html>

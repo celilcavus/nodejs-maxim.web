@@ -10,18 +10,21 @@
 
 <body>
     <div class="container mt-5">
-        <form action="/add-about" method="post">
+        <form action="/about/update-about" method="post">
+
+            <input type="hidden" name="id" value="<%= model.id %>">
+
             <!-- <label for="">Icon</label>
             <input type="text" class="form-control" name="icon">
             <br> -->
             <label for="">Title</label>
-            <input type="text" name="title" class="form-control">
+            <input type="text" name="title" class="form-control" value="<%= model.title %>">
             <br>
             <label for="">Sub Title</label>
-            <input type="text" name="subtitle" class="form-control">
+            <input type="text" name="subtitle" class="form-control" value="<%= model.subtitle %>">
             <br>
 
-            <button type="submit" class="btn btn-outline-success">Save</button>
+            <button type="submit" class="btn btn-outline-success">Update</button>
             <a href="/about/GoToAboutList/" class="btn btn-dark">Go ToAbout List</a>
         </form>
     </div>
