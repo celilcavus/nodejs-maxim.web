@@ -45,10 +45,10 @@ router.get('/home/Update/:id', (req, res) => {
     })
 })
 
-router.post('/home/HomeUpdate', (req, res) => {
+router.post('/HomeUpdate', (req, res) => {
     new HomeModel(req.body.title, req.body.subtitle).Update(req.body.id).then((result) => {
         if (result) {
-            res.redirect('/GetHomeList')
+            res.redirect('Home/GetHomeList')
         }
     }).catch((err) => {
         console.log(err);
