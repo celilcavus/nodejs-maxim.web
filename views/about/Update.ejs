@@ -10,9 +10,9 @@
 
 <body>
     <div class="container mt-5">
-        <form action="/about/update-about" method="post">
+        <form action="/about/update-about/<%= model.id %>" method="post">
 
-            <input type="hidden" name="id" value="<%= model.id %>">
+            <!-- <input type="hidden" name="id" value="<%= model.id %>"> -->
 
             <!-- <label for="">Icon</label>
             <input type="text" class="form-control" name="icon">
@@ -25,7 +25,7 @@
             <br>
 
             <button type="submit" class="btn btn-outline-success">Update</button>
-            <a href="/about/GoToAboutList/" class="btn btn-dark">Go ToAbout List</a>
+            <a href="/about/GoToAboutList" class="btn btn-dark">Go ToAbout List</a>
         </form>
     </div>
 </body>
