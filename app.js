@@ -7,6 +7,7 @@ const path = require('path')
 // routers
 const home = require('./controllers/homeController');
 const about = require('./controllers/aboutController');
+const services = require('./controllers/servicesController');
 //end
 
 settingConfig = () => {
@@ -20,6 +21,7 @@ middlewareConfig = () => {
     app.use(application.static(path.join(__dirname, 'static')));
     app.use(home);
     app.use(about);
+    app.use(services);
     // app.use('/',(req,res,next)=>{
     //     res.render("404");
     // })

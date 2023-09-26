@@ -11,15 +11,18 @@
 <body>
     <%- include('../layout/_navbar.ejs') %>
     <div class="container mt-4">
-        <form action="/home/HomeAdd" method="post">
-            <label for="">Title</label>
-            <input type="text" class="form-control" name="title">
+        <form action="/services/services-add" method="post">
+            <label for="">icon</label>
+            <input type="text" name="icon" class="form-control">
             <br>
-            <label>SubTitle</label>
-            <input type="text" class="form-control" name="subtitle">
+            <label for="">Title</label>
+            <input type="text" name="title" class="form-control">
+            <br>
+            <label for="">Description</label>
+            <textarea name="description" class="form-control"></textarea>
             <br>
             <button class="btn btn-dark" type="submit">Save</button>
-            <a href="/home/GetHomeList/" class="btn btn-outline-success">Go to list</a>
+            <a href="/services/list" class="btn btn-primary">Go to list</a>
         </form>
     </div>
 

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <%- include('../layout/_css.ejs') %>
+        <title>Home</title>
+</head>
+
+<body>
+    <%- include('../layout/_navbar.ejs') %>
+
+        <div class="container-fluid mt-2">
+            <div class="table-responsive">
+                <table class="table table-primary">
+                    <thead>
+                        <tr>
+                            <th scope="col">ID</th>
+                            <th scope="col">Icon</th>
+                            <th scope="col">Title</th>
+                            <th scope="col">Description</th>
+                            <th scope="col">Update</th>
+                            <th scope="col">Delete</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                        <% model.forEach(x=> { %>
+                            <tr>
+                                <td>
+                                    <%= x.id %>
+                                </td>
+                                <td>
+                                    <%= x.icon %>
+                                </td>
+                                <td>
+                                    <%= x.title %>
+                                </td>
+                                <td>
+                                    <%= x.description %>
+                                </td>
+                                <td>
+                                    <a href="/services/update/<%= x.id %>" class="btn btn-warning">Update</a>
+                                </td>
+                                <td>
+                                    <a href="/services/delete/<%= x.id %>" class="btn btn-danger">Delete</a>
+                                </td>
+                                <% }) %>
+                            </tr>
+
+                    </tbody>
+                </table>
+                <a href="/services" class="btn btn-primary">Back to Services</a>
+            </div>
+        </div>
+
+
+
+        <%- include('../layout/_js.ejs') %>
+</body>
+
+</html>

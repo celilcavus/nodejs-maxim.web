@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <%- include('../layout/_css.ejs') %>
+    <title>Home</title>
+</head>
+
+<body>
+    <%- include('../layout/_navbar.ejs') %>
+    <div class="container mt-4">
+        <form action="/services/update/<%= model.id %>" method="post">
+
+            <label for="">icon</label>
+            <input type="text" name="icon" class="form-control" value="<%= model.icon %>">
+            <br>
+            <label for="">Title</label>
+            <input type="text" name="title" class="form-control" value="<%= model.title %>">
+            <br>
+            <label for="">Description</label>
+            <textarea name="description" class="form-control"> <%= model.description %></textarea>
+            <br>
+            <button class="btn btn-dark" type="submit">Save</button>
+            <a href="/services/list" class="btn btn-primary">Go to list</a>
+        </form>
+    </div>
+
+
+    <%- include('../layout/_js.ejs') %>
+</body>
+</html>

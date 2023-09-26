@@ -4,11 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/bootstrap/dist/css/bootstrap.css">
+    <%- include('../layout/_css.ejs') %>
     <title>Home</title>
 </head>
 
 <body>
+    <%- include('../layout/_navbar.ejs') %>
     <div class="container mt-4">
         <table class="table table-borderd table-striped">
             <thead>
@@ -39,8 +40,11 @@
 
             </tbody>
         </table>
-        <a href="/home/index" class="btn btn-outline-success">Index</a>
+        <a href="/home" class="btn btn-outline-success">Index</a>
+
     </div>
+    
+    <%- include('../layout/_js.ejs') %>
 </body>
 
 </html>

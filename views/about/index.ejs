@@ -4,11 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/bootstrap/dist/css/bootstrap.css">
+    <%- include('../layout/_css.ejs') %>
     <title>About</title>
 </head>
 
 <body>
+    <%- include('../layout/_navbar.ejs') %>
     <div class="container mt-5">
         <form action="/add-about" method="post">
            
@@ -20,9 +21,10 @@
             <br>
 
             <button type="submit" class="btn btn-outline-success">Save</button>
-            <a href="/about/GoToAboutList" class="btn btn-dark">Go ToAbout List</a>
+            <a href="/about/GoToAboutList/" class="btn btn-dark">Go ToAbout List</a>
         </form>
     </div>
+    <%- include('../layout/_js.ejs') %>
 </body>
 
 </html>
