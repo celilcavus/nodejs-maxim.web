@@ -8,6 +8,7 @@ const path = require('path')
 const home = require('./controllers/homeController');
 const about = require('./controllers/aboutController');
 const services = require('./controllers/servicesController');
+const testiominal = require('./controllers/')
 //end
 
 settingConfig = () => {

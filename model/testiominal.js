@@ -22,6 +22,10 @@ class Testimonial{
     Update = (id)=>{
         return context.execute("UPDATE testimonial SET fullname = ? , title = ? , image = ? , description = ? WHERE id = ? ",[this.fullname,this.title,this.image,this.description,id]);
     }
+
+    Delete = (id)=>{
+        return context.execute("DELETE FROM testimonial WHERE id = ?",[id]);
+    }
 }
 
 
